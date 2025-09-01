@@ -1,0 +1,17 @@
+[Unit]
+Description=HyperHash Edge (SV1 translator + SV2 frontend)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=hyperhash
+Group=hyperhash
+WorkingDirectory=/opt/hyperhash
+ExecStart=/opt/hyperhash/bin/hh-edge --config /opt/hyperhash/configs/edge.toml
+Restart=always
+RestartSec=2
+LimitNOFILE=1048576
+Environment=RUST_LOG=info
+
+[Install]
+WantedBy=multi-user.target
