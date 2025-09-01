@@ -1,0 +1,16 @@
+[edge]
+region = "lon1"
+sv1_listen = "0.0.0.0:3333"
+sv2_listen = "0.0.0.0:34254"
+
+[core_bus]
+nats_url = "nats://10.10.0.1:4222"   # placeholder for Core control bus
+wg_interface = "wg0"                 # optional
+
+[flow]
+rapid_dispatch = true
+stale_kill_on_tip = true
+dedup_enforced = true
+
+[security]
+require_tls = false                  # enable later if you want TLS to miners
