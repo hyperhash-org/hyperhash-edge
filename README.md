@@ -1,9 +1,15 @@
-# HyperHash Edge
+# Hyper Hash — Edge
 
-Regional edge node:
-- SV1 translator
-- SV2 frontend
-- Control-bus client (Core sync)
-- Rapid dispatch + pre-notify
+Regional edge node service for Hyper Hash.  
+Runs close to miners to detect tip changes quickly and push updated templates to the pool.
 
-**Build model:** systemd-managed binary, no Docker/K8s.
+## Features
+- Fast tip detection (bitcoind ZMQ + RPC)
+- Peer edge communication (mirror function)
+- Template fan-out to pool + overlay
+- Optional regional stratum ingress
+
+## Running
+```bash
+make build
+./edge -config ./configs/edge.yml
