@@ -9,6 +9,14 @@ Runs close to miners to detect tip changes quickly and push updated templates to
 - Template fan-out to pool + overlay
 - Optional regional stratum ingress
 
+## Quickstart
+
+### Build
+```bash
+make build
+# or
+go build -o ./bin/hh-edge ./cmd/hh-edge
+
 ## Running
 ```bash
 make build
