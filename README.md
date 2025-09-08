@@ -1,3 +1,5 @@
+[![CI](https://github.com/hyperhash-org/hyperhash-edge/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/hyperhash-org/hyperhash-edge/actions/workflows/ci.yml)
+
 # Hyper Hash — Edge
 
 Regional edge node service for Hyper Hash.  
